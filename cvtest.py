@@ -5,9 +5,9 @@ import PoseModule as pm
 import password
 
 def get_stream_video():
-    # camera 정의cv2.VideoCapture('http://192.168.0.9:8080/video')
+    # camera 정의cv2.VideoCapture('http://{아이피 주소}:8080/video')
 
-    cam = cv2.VideoCapture(password.camear_ip)
+    cam = cv2.VideoCapture(0,cv2.CAP_ANDROID)#password.camear_ip
     detector = pm.poseDetector()
     count = 0
     direction = 0
